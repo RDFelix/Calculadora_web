@@ -1,0 +1,109 @@
+body{
+	background-color: #3d3d3d;
+	font-family: 'Pixelify Sans', sans-serif;
+	padding: 10px 1.3rem;
+	display: flex;
+}
+#screen{
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size:20px;
+	width: 93%;
+	text-align: right;
+	padding: 2px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 7px;
+}
+.container{
+	width: 68%;
+}
+
+.config{
+	color: #3498db; 
+	border-radius: 5px;
+	width: 93%;
+	margin-top: 10px;
+    background-color:  #1a1a1a;
+    padding: 5px;
+}
+
+button{
+	width: 65px;
+	background-color: #3d3d3d;
+	font-family: 'Pixelify Sans', sans-serif;
+    border: 2px solid transparent;
+    color: #3498db;
+   	padding: 5px 10px;
+   	font-size: 20px;
+   	cursor: pointer;
+   	transition: background-color 0.3s, color 0.3s;
+   	border-radius: 5px;
+   	margin:3px;
+}
+
+button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.div_consola{
+	color: #3498db; 
+	border-radius: 5px;
+	margin: 0px 0px 0px 50px;
+	width: 100%;
+	height: 90vh;
+	padding: 10px;
+    background-color:  #1a1a1a;
+    
+}
+#consola{
+	height: 40vh;
+	overflow: auto; 
+}
+
+#notas{
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size:18px;
+	width: 90%;
+	padding: 10px;
+	border-radius: 0 5px 5px 5px;
+	border: none;
+	overflow-y: scroll; 
+	resize: none;
+}
+
+#div_notas{
+	overflow: scroll;
+	height: 30vh;
+	margin-top: 5px;
+}
+#simbolo{
+	animation: aparecerDesaparecer 2s infinite;
+}
+@keyframes aparecerDesaparecer {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#div_nueva{
+	display: inline-block;
+	font-size:18px;
+	position: absolute;
+	transform: translate(150px, 50px);
+	visibility: hidden;
+	width: 20%;
+	height: auto;
+	padding: 8px;
+	margin:0;
+	color: #3498db; 
+	border-radius: 5px;
+    background-color:  #1a1a1a;
+}
+
+#label_n{
+	font-size:20px; 
+	padding:2px 10px; 
+	border-radius: 5px 5px 0 0;
+	background-color: #3d3d3d;
+}

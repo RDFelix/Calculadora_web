@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora</title>
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" href="../images/icon_page.png" type="image/x-icon">
+
+</head>
+<body>
+	<center class="container">
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+
+        <div class="btns">
+            <div class="row">
+                <button id="ce" onclick="backspc()">CE</button>
+                <button onclick="fact()">x!</button>
+                <button class="btn">(</button>
+                <button class="btn">)</button>
+                <button class="btn">%</button>
+                <button id="ac" onclick="screen.value=''; entrada.innerHTML='' ">AC</button>
+            </div>
+
+            <div class="row">
+                <button onclick="sin()">sin</button>
+                <button onclick="pi()">π</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+            </div>
+
+            <div class="row">
+                <button onclick="cos()">cos</button>
+                <button onclick="log()">log</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">*</button>
+            </div>
+
+            <div class="row">
+                <button onclick="tan()">tan</button>
+                <button onclick="sqrt()">√</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+            </div>
+
+            <div class="row">
+                <button onclick="e()">e</button>
+                <button onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span>
+                </button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button id="eval" onclick="screen.value=eval(screen.value); cons();">=</button>
+                <button class="btn">+</button>
+            </div>
+        </div>
+
+        <div class="config">
+        	<div style="display:flex;">
+        		<label for="color_fonts" style="width: 150px;">Color de letra</label>
+		    	<input type="color" id="color_fonts" value="#3498db">
+        	</div>
+        	
+        	<div style="display:flex;">
+        		<label for="color_bg" style="width: 150px;">Color de fondo</label>
+		    	<input type="color" id="color_bg" value="#1a1a1a">
+        	</div>
+
+        	<div style="display:flex;">
+        		<label for="color_windows" style="width: 150px;">Color de ventanas</label>
+		    	<input type="color" id="color_windows" value="#3d3d3d">
+        	</div>
+        </div>
+    </center>
+    <div class="div_consola">
+    	<div style="display: flex;">
+    		<label for="notas" id="label_n">Agrega una nota</label>
+    		<button style="font-size: 14px; padding: 2px; " onclick="borrar_n();">Borrar</button>
+    	</div>
+    	
+    	<div style="display: flex; height: 40vh;">	
+    		<textarea type="text" name="" id="notas" width="100%" placeholder="Agrega una nota" rows="10" cols="50">
+    		</textarea>
+    		<div id="div_nueva">
+    				<center><p>Nueva nota</p></center>
+    				<input type="text" name="" id="name_nota" placeholder="Nombre de la nota">
+    				<br>
+    				<span>Color de nota</span><input type="color" id="color_n" value="#3d3d3d">
+    				<br>
+    				<button onclick="hide_n()" style="font-size: 18px; width: auto;">Cancelar</button>
+    				<button onclick="guardar_n()" style="font-size: 18px; width: auto;">Guardar</button>
+    		</div>
+    		<center style="width: 15%; height: 100%; border-radius: 5px;">
+    			
+    			<button id="agregar_nota" onclick="show_n()" style="border-radius: 50%; background-color: #3d3d3d; width: 50px; height: 50px;">+</button>
+	    		<div id="div_notas">
+	    			
+	    		</div>
+    		</center>
+    	</div>
+    	<div id="consola"></div>
+    	<p><span id="simbolo">></span><span id="entrada"></span> </p>
+    </div>
+</body>
+<script type="text/javascript" src="../scripts/script.js"></script>
+</html>
